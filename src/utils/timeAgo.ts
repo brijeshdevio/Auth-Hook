@@ -1,7 +1,7 @@
 function timeAgo(date: string) {
-  const now: number = new Date();
-  const past: number = new Date(date);
-  const seconds = Math.floor((now - past) / 1000);
+  const now: Date = new Date();
+  const past: Date = new Date(date);
+  const seconds: number = Math.floor((now.getTime() - past.getTime()) / 1000);
 
   const intervals: Record<string, number> = {
     year: 31536000, // 365 * 24 * 60 * 60
